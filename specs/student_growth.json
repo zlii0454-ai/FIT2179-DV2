@@ -1,22 +1,52 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 350,
+
+  "width": 800,
+  "height": 450,
+
   "data": {
     "url": "Data/dv2_cleaned_data/student_trend.csv"
   },
+
+  "transform": [
+    {
+      "fold": ["Enrolments", "Commencements"],
+      "as": ["Type", "Students"]
+    }
+  ],
+
   "mark": {
     "type": "line",
     "point": true
   },
+
   "encoding": {
     "x": {
       "field": "Year",
       "type": "ordinal"
     },
+
     "y": {
-      "field": "Enrolments",
+      "field": "Students",
       "type": "quantitative"
-    }
+    },
+
+    "color": {
+      "field": "Type",
+      "type": "nominal"
+    },
+
+    "tooltip": [
+      {
+        "field": "Year"
+      },
+      {
+        "field": "Type"
+      },
+      {
+        "field": "Students",
+        "format": ","
+      }
+    ]
   }
 }
