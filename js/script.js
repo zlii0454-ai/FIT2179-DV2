@@ -15,3 +15,9 @@ vegaEmbed(
   "specs/sector_area.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#state_heatmap",
+  "specs/state_heatmap.json",
+  { actions: false }
+).catch(console.error);
