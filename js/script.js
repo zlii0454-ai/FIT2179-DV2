@@ -21,3 +21,9 @@ vegaEmbed(
   "specs/state_heatmap.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#state_bubble",
+  "specs/state_bubble.json",
+  { actions: false }
+).catch(console.error);
