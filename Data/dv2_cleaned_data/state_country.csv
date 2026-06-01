@@ -1,0 +1,201 @@
+StateCode,State,Country,Continuing,New,Students
+NSW,New South Wales,China,64881,8098,72979
+NSW,New South Wales,Nepal,33474,1190,34664
+NSW,New South Wales,India,24323,2239,26562
+NSW,New South Wales,Bangladesh,10855,1042,11897
+NSW,New South Wales,Indonesia,9550,667,10217
+NSW,New South Wales,Vietnam,9337,640,9977
+NSW,New South Wales,Philippines,7017,331,7348
+NSW,New South Wales,Thailand,6613,157,6770
+NSW,New South Wales,Pakistan,6084,305,6389
+NSW,New South Wales,Brazil,5825,258,6083
+NSW,New South Wales,Colombia,5416,57,5473
+NSW,New South Wales,Republic of Korea (South),4290,629,4919
+NSW,New South Wales,Mongolia,3207,129,3336
+NSW,New South Wales,Hong Kong SAR,2737,489,3226
+NSW,New South Wales,Taiwan,2602,292,2894
+NSW,New South Wales,Malaysia,2584,299,2883
+NSW,New South Wales,United States of America,767,1976,2743
+NSW,New South Wales,Kenya,1720,382,2102
+NSW,New South Wales,Japan,1626,274,1900
+NSW,New South Wales,Fiji,1508,49,1557
+NSW,New South Wales,Singapore,1307,232,1539
+NSW,New South Wales,Sri Lanka,1333,127,1460
+NSW,New South Wales,Turkiye,1080,68,1148
+NSW,New South Wales,Chile,1061,51,1112
+NSW,New South Wales,Saudi Arabia,961,36,997
+VIC,Victoria,India,40083,1417,41500
+VIC,Victoria,China,37733,1853,39586
+VIC,Victoria,Vietnam,10554,407,10961
+VIC,Victoria,Sri Lanka,9824,408,10232
+VIC,Victoria,Nepal,8145,247,8392
+VIC,Victoria,Indonesia,5746,342,6088
+VIC,Victoria,Colombia,5836,80,5916
+VIC,Victoria,Bangladesh,5199,370,5569
+VIC,Victoria,Philippines,5195,220,5415
+VIC,Victoria,Malaysia,4382,207,4589
+VIC,Victoria,Pakistan,4020,92,4112
+VIC,Victoria,Thailand,3848,102,3950
+VIC,Victoria,Cambodia,2192,391,2583
+VIC,Victoria,Taiwan,2213,172,2385
+VIC,Victoria,Hong Kong SAR,1998,145,2143
+VIC,Victoria,Kenya,1882,167,2049
+VIC,Victoria,Republic of Korea (South),1606,236,1842
+VIC,Victoria,Japan,1468,178,1646
+VIC,Victoria,Saudi Arabia,1285,312,1597
+VIC,Victoria,Singapore,1479,111,1590
+VIC,Victoria,Turkiye,1206,71,1277
+VIC,Victoria,Brazil,1159,74,1233
+VIC,Victoria,Chile,862,39,901
+VIC,Victoria,Iran,840,38,878
+VIC,Victoria,Mexico,630,172,802
+QLD,Queensland,China,14548,2145,16693
+QLD,Queensland,India,12012,1056,13068
+QLD,Queensland,Brazil,4527,322,4849
+QLD,Queensland,Colombia,3849,94,3943
+QLD,Queensland,Philippines,3554,186,3740
+QLD,Queensland,Nepal,3495,172,3667
+QLD,Queensland,Republic of Korea (South),2628,395,3023
+QLD,Queensland,Taiwan,2369,284,2653
+QLD,Queensland,Japan,1858,381,2239
+QLD,Queensland,Vietnam,2083,138,2221
+QLD,Queensland,Thailand,1688,81,1769
+QLD,Queensland,Hong Kong SAR,1479,170,1649
+QLD,Queensland,Indonesia,1297,230,1527
+QLD,Queensland,United States of America,850,500,1350
+QLD,Queensland,Bangladesh,1138,183,1321
+QLD,Queensland,Canada,1056,242,1298
+QLD,Queensland,Sri Lanka,1161,98,1259
+QLD,Queensland,Spain,1072,142,1214
+QLD,Queensland,Bhutan,1136,65,1201
+QLD,Queensland,Malaysia,1002,172,1174
+QLD,Queensland,Papua New Guinea,981,129,1110
+QLD,Queensland,Chile,979,60,1039
+QLD,Queensland,Pakistan,900,69,969
+QLD,Queensland,Singapore,747,158,905
+QLD,Queensland,Kenya,722,78,800
+WA,Western Australia,India,7736,975,8711
+WA,Western Australia,Bhutan,5824,998,6822
+WA,Western Australia,China,5555,724,6279
+WA,Western Australia,Bangladesh,2654,920,3574
+WA,Western Australia,Nepal,2912,421,3333
+WA,Western Australia,Pakistan,2582,306,2888
+WA,Western Australia,Philippines,1783,127,1910
+WA,Western Australia,Vietnam,1681,139,1820
+WA,Western Australia,Kenya,1445,298,1743
+WA,Western Australia,Indonesia,1432,204,1636
+WA,Western Australia,Sri Lanka,1394,198,1592
+WA,Western Australia,Colombia,1239,38,1277
+WA,Western Australia,Malaysia,1024,165,1189
+WA,Western Australia,Brazil,1058,53,1111
+WA,Western Australia,Singapore,907,181,1088
+WA,Western Australia,Hong Kong SAR,662,93,755
+WA,Western Australia,Japan,468,268,736
+WA,Western Australia,Republic of Korea (South),488,104,592
+WA,Western Australia,United Kingdom,483,109,592
+WA,Western Australia,Mauritius,524,44,568
+WA,Western Australia,Taiwan,507,56,563
+WA,Western Australia,France,398,99,497
+WA,Western Australia,Zimbabwe,402,46,448
+WA,Western Australia,Italy,308,70,378
+WA,Western Australia,Thailand,335,28,363
+SA,South Australia,India,7978,511,8489
+SA,South Australia,China,6245,449,6694
+SA,South Australia,Nepal,2560,107,2667
+SA,South Australia,Vietnam,2242,102,2344
+SA,South Australia,Bangladesh,1361,135,1496
+SA,South Australia,Hong Kong SAR,916,134,1050
+SA,South Australia,Sri Lanka,920,71,991
+SA,South Australia,Philippines,937,46,983
+SA,South Australia,Colombia,924,12,936
+SA,South Australia,Kenya,752,41,793
+SA,South Australia,Brazil,562,39,601
+SA,South Australia,Pakistan,528,31,559
+SA,South Australia,Malaysia,464,46,510
+SA,South Australia,Indonesia,405,68,473
+SA,South Australia,Singapore,399,52,451
+SA,South Australia,Japan,287,145,432
+SA,South Australia,Republic of Korea (South),369,59,428
+SA,South Australia,Taiwan,370,32,402
+SA,South Australia,Thailand,304,12,316
+SA,South Australia,Cambodia,243,30,273
+SA,South Australia,Canada,162,44,206
+SA,South Australia,Iran,175,22,197
+SA,South Australia,Germany,125,55,180
+SA,South Australia,Saudi Arabia,164,4,168
+SA,South Australia,Nigeria,139,8,147
+TAS,Tasmania,Nepal,952,46,998
+TAS,Tasmania,India,717,39,756
+TAS,Tasmania,Bangladesh,428,219,647
+TAS,Tasmania,China,508,67,575
+TAS,Tasmania,Pakistan,456,53,509
+TAS,Tasmania,Vietnam,232,30,262
+TAS,Tasmania,Sri Lanka,202,25,227
+TAS,Tasmania,Colombia,157,0,157
+TAS,Tasmania,Philippines,123,13,136
+TAS,Tasmania,Taiwan,96,25,121
+TAS,Tasmania,Hong Kong SAR,98,14,112
+TAS,Tasmania,Saudi Arabia,74,25,99
+TAS,Tasmania,Brazil,70,21,91
+TAS,Tasmania,Malaysia,76,15,91
+TAS,Tasmania,Republic of Korea (South),59,24,83
+TAS,Tasmania,Indonesia,62,12,74
+TAS,Tasmania,Japan,44,24,68
+TAS,Tasmania,Nigeria,52,12,64
+TAS,Tasmania,Kenya,52,9,61
+TAS,Tasmania,Thailand,46,12,58
+TAS,Tasmania,United States of America,34,16,50
+TAS,Tasmania,Chile,46,3,49
+TAS,Tasmania,United Kingdom,34,14,48
+TAS,Tasmania,Singapore,39,6,45
+TAS,Tasmania,Germany,28,13,41
+NT,Northern Territory,Nepal,1196,4,1200
+NT,Northern Territory,India,745,1,746
+NT,Northern Territory,Bangladesh,493,1,494
+NT,Northern Territory,Philippines,238,4,242
+NT,Northern Territory,Vietnam,211,12,223
+NT,Northern Territory,China,207,4,211
+NT,Northern Territory,Pakistan,205,3,208
+NT,Northern Territory,Indonesia,80,16,96
+NT,Northern Territory,Sri Lanka,83,2,85
+NT,Northern Territory,Kenya,55,3,58
+NT,Northern Territory,Colombia,38,0,38
+NT,Northern Territory,Bhutan,25,0,25
+NT,Northern Territory,Thailand,19,4,23
+NT,Northern Territory,United Kingdom,18,1,19
+NT,Northern Territory,Nigeria,18,0,18
+NT,Northern Territory,Brazil,18,0,18
+NT,Northern Territory,Taiwan,16,1,17
+NT,Northern Territory,Cambodia,14,1,15
+NT,Northern Territory,Zimbabwe,13,1,14
+NT,Northern Territory,Fiji,12,1,13
+NT,Northern Territory,Malaysia,12,0,12
+NT,Northern Territory,Ethiopia,10,0,10
+NT,Northern Territory,Timor-Leste,10,0,10
+NT,Northern Territory,Germany,10,0,10
+NT,Northern Territory,Peru,9,0,9
+ACT,Australian Capital Territory,China,4408,693,5101
+ACT,Australian Capital Territory,India,2040,261,2301
+ACT,Australian Capital Territory,Nepal,1319,46,1365
+ACT,Australian Capital Territory,Bhutan,684,57,741
+ACT,Australian Capital Territory,Vietnam,382,39,421
+ACT,Australian Capital Territory,Bangladesh,263,64,327
+ACT,Australian Capital Territory,Pakistan,288,29,317
+ACT,Australian Capital Territory,Indonesia,267,47,314
+ACT,Australian Capital Territory,Philippines,282,28,310
+ACT,Australian Capital Territory,Republic of Korea (South),161,43,204
+ACT,Australian Capital Territory,Malaysia,143,40,183
+ACT,Australian Capital Territory,Taiwan,131,17,148
+ACT,Australian Capital Territory,Sri Lanka,130,17,147
+ACT,Australian Capital Territory,Hong Kong SAR,109,36,145
+ACT,Australian Capital Territory,Japan,82,18,100
+ACT,Australian Capital Territory,Singapore,76,15,91
+ACT,Australian Capital Territory,United Kingdom,67,20,87
+ACT,Australian Capital Territory,United States of America,50,29,79
+ACT,Australian Capital Territory,Thailand,67,8,75
+ACT,Australian Capital Territory,Colombia,61,2,63
+ACT,Australian Capital Territory,Iran,58,3,61
+ACT,Australian Capital Territory,Saudi Arabia,49,11,60
+ACT,Australian Capital Territory,Brazil,48,4,52
+ACT,Australian Capital Territory,Kenya,48,4,52
+ACT,Australian Capital Territory,Mongolia,49,2,51
