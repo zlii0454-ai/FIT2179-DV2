@@ -32,3 +32,9 @@ vegaEmbed(
   "#state_choropleth",
   "specs/state_choropleth.json",
 ).catch(console.error);
+
+vegaEmbed(
+  "#state_bump_chart",
+  "specs/state_bump_chart.json",
+  { actions: false }
+).catch(console.error);
