@@ -10,19 +10,19 @@ body {
 }
 
 .page {
-  max-width: 1080px;
+  max-width: 1380px;
   margin: 0 auto;
-  padding: 34px 28px 60px;
+  padding: 28px 30px 60px;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #6b6b6b;
@@ -37,29 +37,34 @@ h1 {
 .subtitle {
   max-width: 720px;
   margin: 12px auto 0;
-  font-size: 17px;
+  font-size: 16px;
   color: #555;
   line-height: 1.45;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
 }
 
 .chart-section {
   background: #ffffff;
   border-radius: 18px;
-  padding: 26px 30px 30px;
-  margin-bottom: 34px;
+  padding: 24px 26px 28px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .section-text h2 {
   margin: 0 0 10px;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.25;
 }
 
 .section-text p {
   margin: 0 0 18px;
-  max-width: 920px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: #333;
 }
@@ -72,4 +77,10 @@ h1 {
 .vega-embed {
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
 }
