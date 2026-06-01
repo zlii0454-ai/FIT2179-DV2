@@ -50,3 +50,9 @@ vegaEmbed(
   "specs/student_rate_ranking.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#state_small_multiples",
+  "specs/state_small_multiples.json",
+  { actions: false }
+).catch(console.error);
