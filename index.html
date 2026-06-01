@@ -24,141 +24,180 @@
       <p class="subtitle">
         Who comes to Australia, where they study, and why international education matters.
       </p>
+
+      <p class="hero-summary">
+        This visualisation explores the changing scale, origin, sector distribution, and geographic concentration
+        of international students in Australia. It focuses not only on where students come from, but also on how
+        different Australian states and territories attract different student communities.
+      </p>
     </header>
 
-    <div class="chart-stack">
+    <section class="chapter-intro">
+      <p class="chapter-label">Part 1 · Growth over time</p>
+      <h2>Australia’s international education system expanded rapidly before 2020</h2>
+      <p>
+        The first two charts show how international education grew over time and which education sectors shaped that growth.
+      </p>
+    </section>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>International student enrolments grew strongly before 2020</h2>
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>International student enrolments grew strongly before 2020</h3>
+        <p>
+          Australia’s international student enrolments increased from about 275,000 in 2002
+          to more than 950,000 in 2019, before falling in 2020.
+        </p>
+      </div>
 
-          <p>
-            Australia’s international student enrolments increased from about 275,000 in 2002
-            to more than 950,000 in 2019, before falling in 2020.
-          </p>
-        </div>
+      <div id="line_chart" class="chart"></div>
+    </section>
 
-        <div id="line_chart" class="chart"></div>
-      </section>
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Higher education became the dominant international student sector</h3>
+        <p>
+          International student enrolments are not evenly distributed across education sectors.
+          Higher education accounts for the largest share, while VET and ELICOS also played important roles
+          in Australia’s international education system.
+        </p>
+      </div>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Where do international students come from?</h2>
+      <div id="sector_area" class="chart"></div>
+    </section>
 
-          <p>
-            Australia’s international student population is strongly shaped by a small number of major source countries.
-            China and India remain the two largest contributors, followed by Nepal and several Southeast Asian countries.
-          </p>
-        </div>
+    <section class="chapter-intro">
+      <p class="chapter-label">Part 2 · Source countries</p>
+      <h2>Australia’s international student population is shaped by a small number of major source countries</h2>
+      <p>
+        The next charts compare national source-country patterns with sector composition and state-level differences.
+      </p>
+    </section>
 
-        <div id="country_lollipop" class="chart"></div>
-      </section>
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Where do international students come from?</h3>
+        <p>
+          Australia’s international student population is strongly shaped by a small number of major source countries.
+          China and India remain the two largest contributors, followed by Nepal and several Southeast Asian countries.
+        </p>
+      </div>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Higher education became the dominant international student sector</h2>
-      
-          <p>
-            International student enrolments are not evenly distributed across education sectors.
-            Higher education accounts for the largest share, while VET and ELICOS also played important roles in Australia’s international education system.
-          </p>
-        </div>
-      
-        <div id="sector_area" class="chart"></div>
-      </section>
-      
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Different states attract different student communities</h2>
-      
-          <p>
-            The distribution of source countries varies across Australian states and territories.
-            This heatmap highlights how major student communities are concentrated differently across the country.
-          </p>
-        </div>
-      
-        <div id="state_heatmap" class="chart"></div>
-      </section>
+      <div id="country_lollipop" class="chart"></div>
+    </section>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Which states rely most on international students?</h2>
-      
-          <p>
-            Larger states generally host more international students, but the relationship is not only about population size.
-            Comparing student numbers with state population helps reveal where international students form a larger share of the community.
-          </p>
-        </div>
-      
-        <div id="state_bubble" class="chart"></div>
-      </section>
+    <section class="chart-section compact-chart">
+      <div class="section-text">
+        <h3>Higher education dominated the 2020 sector composition</h3>
+        <p>
+          By 2020, higher education remained the largest part of Australia’s international education system.
+          This radial chart summarises the sector composition in a single year.
+        </p>
+      </div>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Some states host more international students relative to their population</h2>
-      
-          <p>
-            A state with more international students does not always have the highest student concentration.
-            By comparing international students with total population, this map shows where international students form a larger share of the local community.
-          </p>
-        </div>
-      
-        <div id="state_choropleth" class="chart"></div>
-      </section>
+      <div id="sector_donut" class="chart"></div>
+    </section>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Source-country rankings shift across states</h2>
-      
-          <p>
-            The largest source countries are not ranked the same way in every state.
-            This ranking flow chart shows how major student communities change position across Australian states and territories.
-          </p>
-        </div>
-      
-        <div id="state_bump_chart" class="chart"></div>
-      </section>
+    <section class="chapter-intro">
+      <p class="chapter-label">Part 3 · State differences</p>
+      <h2>Different states attract different international student communities</h2>
+      <p>
+        State-level patterns reveal that international student communities are not evenly distributed across Australia.
+      </p>
+    </section>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Higher education dominated the 2020 sector composition</h2>
-      
-          <p>
-            By 2020, higher education remained the largest part of Australia’s international education system.
-            This radial chart summarises the sector composition in a single year.
-          </p>
-        </div>
-      
-        <div id="sector_donut" class="chart"></div>
-      </section>
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Different states attract different student communities</h3>
+        <p>
+          The distribution of source countries varies across Australian states and territories.
+          This heatmap highlights how major student communities are concentrated differently across the country.
+        </p>
+      </div>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Which state has the highest international student concentration?</h2>
-      
-          <p>
-            Total student numbers can favour larger states, so this ranking compares international students
-            relative to each state or territory’s population. This reveals where international students form
-            a larger share of the local community.
-          </p>
-        </div>
-      
-        <div id="student_rate_ranking" class="chart"></div>
-      </section>
+      <div id="state_heatmap" class="chart"></div>
+    </section>
 
-      <section class="chart-section">
-        <div class="section-text">
-          <h2>Each state has its own top source-country profile</h2>
-      
-          <p>
-            Looking at each state separately reveals local differences that are hidden in national totals.
-            While China and India are major source countries overall, some states show stronger concentrations of students from Nepal, Vietnam, or Bangladesh.
-          </p>
-        </div>
-      
-        <div id="state_small_multiples" class="chart"></div>
-      </section>
-    </div>
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Which states rely most on international students?</h3>
+        <p>
+          Larger states generally host more international students, but the relationship is not only about population size.
+          Comparing student numbers with state population helps reveal where international students form a larger share
+          of the community.
+        </p>
+      </div>
+
+      <div id="state_bubble" class="chart"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Some states host more international students relative to their population</h3>
+        <p>
+          A state with more international students does not always have the highest student concentration.
+          By comparing international students with total population, this map shows where international students form
+          a larger share of the local community.
+        </p>
+      </div>
+
+      <div id="state_choropleth" class="chart"></div>
+    </section>
+
+    <section class="chapter-intro">
+      <p class="chapter-label">Part 4 · Local profiles and concentration</p>
+      <h2>Looking beyond totals reveals more detailed student patterns</h2>
+      <p>
+        The final charts use rankings and small multiples to compare state-level student profiles in more detail.
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Source-country rankings shift across states</h3>
+        <p>
+          The largest source countries are not ranked the same way in every state.
+          This ranking flow chart shows how major student communities change position across Australian states and territories.
+        </p>
+      </div>
+
+      <div id="state_bump_chart" class="chart"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Which state has the highest international student concentration?</h3>
+        <p>
+          Total student numbers can favour larger states, so this ranking compares international students
+          relative to each state or territory’s population. This reveals where international students form
+          a larger share of the local community.
+        </p>
+      </div>
+
+      <div id="student_rate_ranking" class="chart"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="section-text">
+        <h3>Each state has its own top source-country profile</h3>
+        <p>
+          Looking at each state separately reveals local differences that are hidden in national totals.
+          While China and India are major source countries overall, some states show stronger concentrations
+          of students from Nepal, Vietnam, or Bangladesh.
+        </p>
+      </div>
+
+      <div id="state_small_multiples" class="chart"></div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Data sources: Australian Government Department of Education international student data,
+        Australian Bureau of Statistics population data, and Australian state boundary GeoJSON.
+      </p>
+      <p>
+        Author: Zihan Li · Student ID: 35158395 · FIT2179 Data Visualisation 2
+      </p>
+    </footer>
 
   </main>
 
