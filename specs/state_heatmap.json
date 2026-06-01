@@ -1,0 +1,123 @@
+  {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 760,
+  "height": 420,
+
+  "title": {
+    "text": "Major Source Countries by State and Territory",
+    "subtitle": "Darker cells indicate larger international student communities",
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "fontWeight": "bold",
+    "subtitleColor": "#555"
+  },
+
+  "data": {
+    "url": "Data/dv2_cleaned_data/state_country.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.Students)",
+      "as": "Students_num"
+    },
+    {
+      "filter": "indexof(['China','India','Nepal','Vietnam','Bangladesh','Indonesia','Philippines','Colombia','Sri Lanka','Pakistan'], datum.Country) >= 0"
+    }
+  ],
+
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+    "x": {
+      "field": "StateCode",
+      "type": "nominal",
+      "title": "State / Territory",
+      "sort": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Source Country",
+      "sort": [
+        "China",
+        "India",
+        "Nepal",
+        "Vietnam",
+        "Bangladesh",
+        "Indonesia",
+        "Philippines",
+        "Colombia",
+        "Sri Lanka",
+        "Pakistan"
+      ]
+    },
+
+    "color": {
+      "field": "Students_num",
+      "type": "quantitative",
+      "title": "Students",
+      "scale": {
+        "scheme": "blues"
+      },
+      "legend": {
+        "format": ",.0f"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "State",
+        "type": "nominal",
+        "title": "State"
+      },
+      {
+        "field": "Country",
+        "type": "nominal",
+        "title": "Source Country"
+      },
+      {
+        "field": "Students_num",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Total Students"
+      },
+      {
+        "field": "Continuing",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Continuing Students"
+      },
+      {
+        "field": "New",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "New Students"
+      }
+    ]
+  },
+
+  "config": {
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "orient": "right"
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
