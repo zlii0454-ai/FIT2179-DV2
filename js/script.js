@@ -1,4 +1,4 @@
 vegaEmbed(
   "#line_chart",
-  "specs/student_growth_line_chart.json"
+  "specs/student_growth.json"
 ).catch(console.error);
