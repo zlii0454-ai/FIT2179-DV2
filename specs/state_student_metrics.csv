@@ -1,0 +1,162 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 760,
+  "height": 420,
+
+  "title": {
+    "text": "International Students Compared with State Population",
+    "subtitle": "Bubble size shows the number of source countries represented in each state or territory",
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "fontWeight": "bold",
+    "subtitleColor": "#555"
+  },
+
+  "data": {
+    "url": "Data/dv2_cleaned_data/state_student_metrics.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.Students)",
+      "as": "Students_num"
+    },
+    {
+      "calculate": "toNumber(datum.Population)",
+      "as": "Population_num"
+    },
+    {
+      "calculate": "toNumber(datum.Countries)",
+      "as": "Countries_num"
+    },
+    {
+      "calculate": "datum.Students_num / datum.Population_num * 1000",
+      "as": "Students_per_1000"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.78,
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "Population_num",
+          "type": "quantitative",
+          "title": "State Population",
+          "axis": {
+            "format": ",.0f"
+          }
+        },
+
+        "y": {
+          "field": "Students_num",
+          "type": "quantitative",
+          "title": "International Students",
+          "axis": {
+            "format": ",.0f"
+          }
+        },
+
+        "size": {
+          "field": "Countries_num",
+          "type": "quantitative",
+          "title": "Source Countries",
+          "scale": {
+            "range": [120, 1200]
+          }
+        },
+
+        "color": {
+          "field": "Students_per_1000",
+          "type": "quantitative",
+          "title": "Students per 1,000 residents",
+          "scale": {
+            "scheme": "oranges"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "Students_num",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "International Students"
+          },
+          {
+            "field": "Population_num",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Population"
+          },
+          {
+            "field": "Countries_num",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Source Countries"
+          },
+          {
+            "field": "Students_per_1000",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Students per 1,000 Residents"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "Population_num",
+          "type": "quantitative"
+        },
+
+        "y": {
+          "field": "Students_num",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "field": "State"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "grid": true,
+      "gridColor": "#eeeeee"
+    },
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "orient": "right"
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
