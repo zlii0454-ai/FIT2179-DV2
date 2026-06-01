@@ -1,52 +1,129 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 850,
+  "height": 460,
 
-  "width": 800,
-  "height": 450,
+  "title": {
+    "text": "International Student Growth in Australia (2002–2020)",
+    "subtitle": "Enrolments peaked in 2019 before declining in 2020",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 13
+  },
 
   "data": {
     "url": "Data/dv2_cleaned_data/student_trend.csv"
   },
 
-  "transform": [
+  "layer": [
     {
-      "fold": ["Enrolments", "Commencements"],
-      "as": ["Type", "Students"]
+      "transform": [
+        {
+          "fold": ["Enrolments", "Commencements"],
+          "as": ["Type", "Students"]
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Academic Year"
+        },
+        "y": {
+          "field": "Students",
+          "type": "quantitative",
+          "title": "Number of Students",
+          "axis": {
+            "format": ","
+          }
+        },
+        "color": {
+          "field": "Type",
+          "type": "nominal",
+          "title": "Student Measure",
+          "scale": {
+            "domain": ["Enrolments", "Commencements"],
+            "range": ["#1f4e79", "#f28e2b"]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "Type",
+            "type": "nominal"
+          },
+          {
+            "field": "Students",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Students"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Year": 2019,
+            "Students": 952271,
+            "Label": "2019 peak: 952,271 enrolments"
+          },
+          {
+            "Year": 2020,
+            "Students": 882482,
+            "Label": "2020 decline after border disruption"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -12,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Students",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        },
+        "color": {
+          "value": "#333333"
+        }
+      }
     }
   ],
 
-  "mark": {
-    "type": "line",
-    "point": true
-  },
-
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "ordinal"
+  "config": {
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "grid": true
     },
-
-    "y": {
-      "field": "Students",
-      "type": "quantitative"
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12
     },
-
-    "color": {
-      "field": "Type",
-      "type": "nominal"
-    },
-
-    "tooltip": [
-      {
-        "field": "Year"
-      },
-      {
-        "field": "Type"
-      },
-      {
-        "field": "Students",
-        "format": ","
-      }
-    ]
+    "view": {
+      "stroke": "transparent"
+    }
   }
 }
