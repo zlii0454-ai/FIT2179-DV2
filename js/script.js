@@ -9,3 +9,9 @@ vegaEmbed(
   "specs/country_lollipop.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#sector_area",
+  "specs/sector_area.json",
+  { actions: false }
+).catch(console.error);
