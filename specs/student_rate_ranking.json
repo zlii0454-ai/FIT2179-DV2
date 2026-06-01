@@ -29,31 +29,47 @@
     {
       "calculate": "datum.Students_num / datum.Population_num * 1000",
       "as": "Students_per_1000"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Students_per_1000",
+          "order": "descending"
+        }
+      ]
     }
   ],
 
   "layer": [
     {
       "mark": {
-        "type": "rule",
-        "strokeWidth": 2,
+        "type": "bar",
+        "height": 3,
         "color": "#c7d4df"
       },
       "encoding": {
+        "x": {
+          "field": "Students_per_1000",
+          "type": "quantitative",
+          "title": "International Students per 1,000 Residents",
+          "axis": {
+            "format": ".1f"
+          }
+        },
         "y": {
           "field": "State",
           "type": "nominal",
+          "title": null,
           "sort": {
-            "field": "Students_per_1000",
-            "order": "descending"
-          },
-          "title": null
-        },
-        "x": {
-          "value": 0
-        },
-        "x2": {
-          "field": "Students_per_1000"
+            "field": "Rank",
+            "order": "ascending"
+          }
         }
       }
     },
@@ -68,20 +84,15 @@
       "encoding": {
         "x": {
           "field": "Students_per_1000",
-          "type": "quantitative",
-          "title": "International Students per 1,000 Residents",
-          "axis": {
-            "format": ".1f"
-          }
+          "type": "quantitative"
         },
         "y": {
           "field": "State",
           "type": "nominal",
           "sort": {
-            "field": "Students_per_1000",
-            "order": "descending"
-          },
-          "title": null
+            "field": "Rank",
+            "order": "ascending"
+          }
         },
         "tooltip": [
           {
@@ -128,8 +139,8 @@
           "field": "State",
           "type": "nominal",
           "sort": {
-            "field": "Students_per_1000",
-            "order": "descending"
+            "field": "Rank",
+            "order": "ascending"
           }
         },
         "text": {
