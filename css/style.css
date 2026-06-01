@@ -10,66 +10,106 @@ body {
 }
 
 .page {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 32px 24px 64px;
+  padding: 34px 24px 68px;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 42px;
 }
 
 .eyebrow {
   margin: 0 0 8px;
   font-size: 12px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #6b6b6b;
 }
 
 h1 {
   margin: 0;
-  font-size: 34px;
-  line-height: 1.15;
+  font-size: 38px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
-  max-width: 720px;
-  margin: 12px auto 0;
-  font-size: 16px;
-  color: #555;
+  max-width: 760px;
+  margin: 14px auto 0;
+  font-size: 17px;
+  color: #444;
   line-height: 1.45;
 }
 
-.chart-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+.hero-summary {
+  max-width: 860px;
+  margin: 24px auto 0;
+  padding: 18px 22px;
+  border-left: 4px solid #1f4e79;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.chapter-intro {
+  margin: 54px 0 22px;
+  padding: 22px 28px;
+  border-radius: 16px;
+  background: #e9eef3;
+}
+
+.chapter-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1f4e79;
+}
+
+.chapter-intro h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.chapter-intro p {
+  margin: 0;
+  max-width: 900px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #333;
 }
 
 .chart-section {
   background: #ffffff;
   border-radius: 18px;
-  padding: 28px 34px 34px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 30px 34px 36px;
+  margin-bottom: 38px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
 }
 
 .section-text {
-  max-width: 880px;
-  margin: 0 auto 18px;
+  max-width: 920px;
+  margin: 0 auto 22px;
 }
 
-.section-text h2 {
+.section-text h3 {
   margin: 0 0 10px;
   font-size: 23px;
   line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 .section-text p {
   margin: 0;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.58;
   color: #333;
 }
 
@@ -80,8 +120,26 @@ h1 {
   overflow: visible;
 }
 
+.compact-chart .chart {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 .vega-embed {
   display: block;
+}
+
+.footer {
+  margin-top: 58px;
+  padding-top: 22px;
+  border-top: 1px solid #d8d2cb;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.footer p {
+  margin: 0 0 8px;
 }
 
 @media (max-width: 900px) {
@@ -90,19 +148,35 @@ h1 {
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
-  .chart-section {
-    padding: 22px 18px 28px;
+  .subtitle {
+    font-size: 15px;
   }
 
-  .section-text h2 {
+  .hero-summary {
+    font-size: 14px;
+  }
+
+  .chapter-intro {
+    padding: 18px 20px;
+  }
+
+  .chapter-intro h2 {
     font-size: 21px;
   }
 
+  .chart-section {
+    padding: 24px 18px 30px;
+  }
+
+  .section-text h3 {
+    font-size: 20px;
+  }
+
   .chart {
-    overflow-x: auto;
     justify-content: flex-start;
+    overflow-x: auto;
   }
 }
