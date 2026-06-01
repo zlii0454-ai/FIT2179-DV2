@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 520,
-  "height": 300,
+  "height": 260,
 
   "title": {
     "text": "International Students per 1,000 Residents",
-    "subtitle": "A custom metric showing international student concentration by state and territory",
+    "subtitle": "A custom metric showing student concentration by state and territory",
     "anchor": "start",
-    "fontSize": 17,
-    "subtitleFontSize": 12,
+    "fontSize": 16,
+    "subtitleFontSize": 11,
     "fontWeight": "bold",
     "subtitleColor": "#555"
   },
@@ -57,13 +57,16 @@
         "x": {
           "field": "Students_per_1000",
           "type": "quantitative",
-          "title": "International Students per 1,000 Residents",
+          "title": "Students per 1,000 residents",
+          "scale": {
+            "domain": [0, 30]
+          },
           "axis": {
             "format": ".1f"
           }
         },
         "y": {
-          "field": "State",
+          "field": "StateCode",
           "type": "nominal",
           "title": null,
           "sort": {
@@ -76,7 +79,7 @@
     {
       "mark": {
         "type": "circle",
-        "size": 150,
+        "size": 120,
         "color": "#1f4e79",
         "stroke": "white",
         "strokeWidth": 1.5
@@ -87,7 +90,7 @@
           "type": "quantitative"
         },
         "y": {
-          "field": "State",
+          "field": "StateCode",
           "type": "nominal",
           "sort": {
             "field": "Rank",
@@ -126,7 +129,7 @@
         "type": "text",
         "align": "left",
         "dx": 8,
-        "fontSize": 11,
+        "fontSize": 10,
         "fontWeight": "bold",
         "color": "#333333"
       },
@@ -136,7 +139,7 @@
           "type": "quantitative"
         },
         "y": {
-          "field": "State",
+          "field": "StateCode",
           "type": "nominal",
           "sort": {
             "field": "Rank",
@@ -154,8 +157,8 @@
 
   "config": {
     "axis": {
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelFontSize": 10,
+      "titleFontSize": 10,
       "grid": true,
       "gridColor": "#eeeeee"
     },
