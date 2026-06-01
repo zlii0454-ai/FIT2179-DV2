@@ -1,36 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f6f3ef;
+  color: #151515;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 36px 56px 48px 56px;
-  max-width: 1180px;
-  background-color: #ffffff;
-  color: #111111;
+  padding: 34px 28px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b6b6b;
 }
 
 h1 {
-  text-align: center;
+  margin: 0;
   font-size: 34px;
-  margin-top: 0;
-  margin-bottom: 28px;
+  line-height: 1.15;
 }
 
-h2 {
-  font-size: 25px;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-p {
+.subtitle {
+  max-width: 720px;
+  margin: 12px auto 0;
   font-size: 17px;
+  color: #555;
   line-height: 1.45;
-  max-width: 1050px;
-  margin-bottom: 20px;
 }
 
-section {
-  margin-bottom: 48px;
+.chart-section {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px 30px 30px;
+  margin-bottom: 34px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-#line_chart {
-  margin-top: 14px;
+.section-text h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.section-text p {
+  margin: 0 0 18px;
+  max-width: 920px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.chart {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.vega-embed {
+  display: block;
+  margin: 0 auto;
 }
