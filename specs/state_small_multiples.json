@@ -1,7 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 560,
-  "height": 420,
 
   "title": {
     "text": "Top 5 Source Countries within Each State and Territory",
@@ -62,16 +60,17 @@
     "title": null,
     "sort": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
     "header": {
-      "labelFontSize": 13,
+      "labelFontSize": 14,
       "labelFontWeight": "bold",
       "labelColor": "#1f4e79"
     }
   },
 
   "columns": 4,
+  "spacing": 24,
 
   "spec": {
-    "width": 190,
+    "width": 210,
     "height": 145,
 
     "layer": [
@@ -91,7 +90,7 @@
               "order": "ascending"
             },
             "axis": {
-              "labelFontSize": 9
+              "labelFontSize": 10
             }
           },
           "x": {
@@ -100,8 +99,11 @@
             "title": null,
             "axis": {
               "format": ".0%",
-              "labelFontSize": 8,
+              "labelFontSize": 9,
               "grid": true
+            },
+            "scale": {
+              "domain": [0, 0.45]
             }
           },
           "tooltip": [
@@ -141,7 +143,7 @@
           "type": "text",
           "align": "left",
           "dx": 4,
-          "fontSize": 8,
+          "fontSize": 9,
           "color": "#333333"
         },
         "encoding": {
@@ -176,7 +178,7 @@
   "config": {
     "axis": {
       "titleFontSize": 10,
-      "labelFontSize": 9,
+      "labelFontSize": 10,
       "gridColor": "#eeeeee"
     },
     "view": {
