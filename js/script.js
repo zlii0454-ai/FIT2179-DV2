@@ -27,3 +27,9 @@ vegaEmbed(
   "specs/state_bubble.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#state_choropleth",
+  "specs/state_choropleth.json",
+  { actions: false }
+).catch(console.error);
