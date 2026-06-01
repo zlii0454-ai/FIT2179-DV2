@@ -23,7 +23,7 @@ vegaEmbed(
 ).catch(console.error);
 
 vegaEmbed(
-  "#state_bubble",
+  "#state_student_metrics.json",
   "specs/state_bubble.json",
   { actions: false }
 ).catch(console.error);
