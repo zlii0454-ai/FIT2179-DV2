@@ -44,3 +44,9 @@ vegaEmbed(
   "specs/sector_donut.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#student_rate_ranking",
+  "specs/student_rate_ranking.json",
+  { actions: false }
+).catch(console.error);
