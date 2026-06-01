@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 48px 56px;
+  padding: 80px 56px 48px 56px;
   background-color: #ffffff;
   color: #111111;
 }
@@ -9,8 +9,8 @@ body {
 h1 {
   text-align: center;
   font-size: 36px;
-  margin-top: 20px;
-  margin-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 42px;
 }
 
 h2 {
