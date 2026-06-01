@@ -14,7 +14,7 @@
   },
 
   "data": {
-    "url": "Data/dv2_cleaned_data/australian-states-fixed.geojson",
+    "url": "Data/dv2_cleaned_data/australian-states-d3.geojson",
     "format": {
       "type": "json",
       "property": "features"
