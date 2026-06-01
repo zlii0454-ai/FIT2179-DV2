@@ -45,7 +45,7 @@ h1 {
 .chart-stack {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 56px;
 }
 
 .chart-section {
