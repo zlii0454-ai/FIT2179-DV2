@@ -3,7 +3,7 @@
 
   "title": {
     "text": "Top 5 Source Countries within Each State and Territory",
-    "subtitle": "Small multiples reveal local differences in international student communities",
+    "subtitle": "Bars show each country’s share of that state or territory’s international students",
     "anchor": "start",
     "fontSize": 17,
     "subtitleFontSize": 12,
@@ -19,6 +19,16 @@
     {
       "calculate": "toNumber(datum.Students)",
       "as": "Students_num"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "Students_num",
+          "as": "State_Total"
+        }
+      ],
+      "groupby": ["StateCode"]
     },
     {
       "window": [
@@ -37,83 +47,122 @@
     },
     {
       "filter": "datum.Rank <= 5"
+    },
+    {
+      "calculate": "datum.Students_num / datum.State_Total",
+      "as": "Share"
     }
   ],
 
   "facet": {
-    "column": {
-      "field": "StateCode",
-      "type": "nominal",
-      "title": null,
-      "sort": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
-      "header": {
-        "labelFontSize": 13,
-        "labelFontWeight": "bold"
-      }
+    "field": "StateCode",
+    "type": "nominal",
+    "title": null,
+    "sort": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
+    "header": {
+      "labelFontSize": 13,
+      "labelFontWeight": "bold",
+      "labelColor": "#1f4e79"
     }
   },
 
+  "columns": 4,
+
   "spec": {
-    "width": 115,
-    "height": 180,
+    "width": 190,
+    "height": 145,
 
-    "mark": {
-      "type": "bar",
-      "cornerRadiusEnd": 3,
-      "color": "#1f4e79"
-    },
-
-    "encoding": {
-      "y": {
-        "field": "Country",
-        "type": "nominal",
-        "title": null,
-        "sort": {
-          "field": "Rank",
-          "order": "ascending"
+    "layer": [
+      {
+        "mark": {
+          "type": "bar",
+          "cornerRadiusEnd": 3,
+          "color": "#1f4e79"
         },
-        "axis": {
-          "labelFontSize": 9
+        "encoding": {
+          "y": {
+            "field": "Country",
+            "type": "nominal",
+            "title": null,
+            "sort": {
+              "field": "Rank",
+              "order": "ascending"
+            },
+            "axis": {
+              "labelFontSize": 9
+            }
+          },
+          "x": {
+            "field": "Share",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "format": ".0%",
+              "labelFontSize": 8,
+              "grid": true
+            }
+          },
+          "tooltip": [
+            {
+              "field": "State",
+              "type": "nominal",
+              "title": "State / Territory"
+            },
+            {
+              "field": "Country",
+              "type": "nominal",
+              "title": "Source Country"
+            },
+            {
+              "field": "Rank",
+              "type": "quantitative",
+              "format": ".0f",
+              "title": "Rank"
+            },
+            {
+              "field": "Students_num",
+              "type": "quantitative",
+              "format": ",.0f",
+              "title": "Students"
+            },
+            {
+              "field": "Share",
+              "type": "quantitative",
+              "format": ".1%",
+              "title": "Share within State"
+            }
+          ]
         }
       },
-
-      "x": {
-        "field": "Students_num",
-        "type": "quantitative",
-        "title": null,
-        "axis": {
-          "format": ",.0f",
-          "labelFontSize": 8,
-          "labelAngle": -35,
-          "grid": true
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 4,
+          "fontSize": 8,
+          "color": "#333333"
+        },
+        "encoding": {
+          "y": {
+            "field": "Country",
+            "type": "nominal",
+            "sort": {
+              "field": "Rank",
+              "order": "ascending"
+            }
+          },
+          "x": {
+            "field": "Share",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "Share",
+            "type": "quantitative",
+            "format": ".0%"
+          }
         }
-      },
-
-      "tooltip": [
-        {
-          "field": "State",
-          "type": "nominal",
-          "title": "State / Territory"
-        },
-        {
-          "field": "Country",
-          "type": "nominal",
-          "title": "Source Country"
-        },
-        {
-          "field": "Rank",
-          "type": "quantitative",
-          "format": ".0f",
-          "title": "Rank"
-        },
-        {
-          "field": "Students_num",
-          "type": "quantitative",
-          "format": ",.0f",
-          "title": "Students"
-        }
-      ]
-    }
+      }
+    ]
   },
 
   "resolve": {
