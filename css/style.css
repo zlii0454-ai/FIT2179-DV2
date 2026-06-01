@@ -127,7 +127,52 @@ h1 {
   max-width: 100%;
   height: auto;
 }
+.summary-card {
+  margin-top: 46px;
+  background: #1f4e79;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 32px 36px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
 
+.summary-card .chapter-label {
+  color: #d8e6f3;
+}
+
+.summary-card h2 {
+  margin: 0 0 24px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 30px;
+}
+
+.summary-grid h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.summary-grid p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #eef5fb;
+}
+
+@media (max-width: 900px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    padding: 26px 24px;
+  }
+}
 .footer {
   margin-top: 58px;
   padding-top: 22px;
