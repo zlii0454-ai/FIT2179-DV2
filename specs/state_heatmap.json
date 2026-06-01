@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 760,
-  "height": 420,
+  "width": 540,
+  "height": 330,
 
   "title": {
     "text": "Major Source Countries by State and Territory",
