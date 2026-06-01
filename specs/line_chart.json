@@ -3,7 +3,7 @@
   "width": 600,
   "height": 350,
   "data": {
-    "url": "Data/student_trend.csv"
+    "url": "Data/dv2_cleaned_data/student_trend.csv"
   }
   "mark": {
     "type": "line",
