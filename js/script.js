@@ -31,5 +31,4 @@ vegaEmbed(
 vegaEmbed(
   "#state_choropleth",
   "specs/state_choropleth.json",
-  { actions: false }
 ).catch(console.error);
