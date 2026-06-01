@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 760,
+  "height": 420,
+
+  "title": {
+    "text": "International Student Enrolments by Education Sector",
+    "subtitle": "Higher education became the largest sector over time",
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "fontWeight": "bold",
+    "subtitleColor": "#555"
+  },
+
+  "data": {
+    "url": "Data/dv2_cleaned_data/sector_trend.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.Enrolments)",
+      "as": "Enrolments_num"
+    }
+  ],
+
+  "mark": {
+    "type": "area",
+    "line": true,
+    "interpolate": "monotone"
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelAngle": -45
+      }
+    },
+
+    "y": {
+      "field": "Enrolments_num",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Number of Students",
+      "axis": {
+        "format": ",.0f"
+      }
+    },
+
+    "color": {
+      "field": "Sector",
+      "type": "nominal",
+      "title": "Education Sector",
+      "scale": {
+        "range": [
+          "#1f4e79",
+          "#f28e2b",
+          "#59a14f",
+          "#e15759",
+          "#76b7b2",
+          "#b07aa1"
+        ]
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      {
+        "field": "Sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
+        "field": "Enrolments_num",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Enrolments"
+      }
+    ]
+  },
+
+  "config": {
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "grid": true,
+      "gridColor": "#eeeeee"
+    },
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "orient": "right"
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
