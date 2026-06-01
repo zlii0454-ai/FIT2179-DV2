@@ -38,3 +38,9 @@ vegaEmbed(
   "specs/state_bump_chart.json",
   { actions: false }
 ).catch(console.error);
+
+vegaEmbed(
+  "#sector_donut",
+  "specs/sector_donut.json",
+  { actions: false }
+).catch(console.error);
