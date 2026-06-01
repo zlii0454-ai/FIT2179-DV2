@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 520,
+  "height": 420,
+
+  "title": {
+    "text": "International Student Enrolments by Sector in 2020",
+    "subtitle": "Higher education remained the largest sector",
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "fontWeight": "bold",
+    "subtitleColor": "#555"
+  },
+
+  "data": {
+    "url": "Data/dv2_cleaned_data/sector_trend.csv"
+  },
+
+  "transform": [
+    {
+      "filter": "datum.Year == 2020 || datum.Year == '2020'"
+    },
+    {
+      "calculate": "toNumber(datum.Enrolments)",
+      "as": "Enrolments_num"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "Enrolments_num",
+          "as": "Total_Enrolments"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.Enrolments_num / datum.Total_Enrolments",
+      "as": "Share"
+    }
+  ],
+
+  "mark": {
+    "type": "arc",
+    "innerRadius": 80,
+    "outerRadius": 170,
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+
+  "encoding": {
+    "theta": {
+      "field": "Enrolments_num",
+      "type": "quantitative",
+      "stack": true
+    },
+
+    "color": {
+      "field": "Sector",
+      "type": "nominal",
+      "title": "Education Sector",
+      "scale": {
+        "domain": [
+          "Higher Education",
+          "VET",
+          "ELICOS",
+          "Schools",
+          "Non-award"
+        ],
+        "range": [
+          "#1f4e79",
+          "#f28e2b",
+          "#76b7b2",
+          "#e15759",
+          "#59a14f"
+        ]
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
+        "field": "Enrolments_num",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Enrolments"
+      },
+      {
+        "field": "Share",
+        "type": "quantitative",
+        "format": ".1%",
+        "title": "Share"
+      }
+    ]
+  },
+
+  "config": {
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "orient": "right"
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
