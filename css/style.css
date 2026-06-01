@@ -10,14 +10,14 @@ body {
 }
 
 .page {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 32px 28px 64px;
+  padding: 32px 24px 64px;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .eyebrow {
@@ -35,7 +35,7 @@ h1 {
 }
 
 .subtitle {
-  max-width: 760px;
+  max-width: 720px;
   margin: 12px auto 0;
   font-size: 16px;
   color: #555;
@@ -45,25 +45,29 @@ h1 {
 .chart-stack {
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 48px;
 }
 
 .chart-section {
   background: #ffffff;
   border-radius: 18px;
-  padding: 28px 32px 32px;
+  padding: 28px 34px 34px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.section-text {
+  max-width: 880px;
+  margin: 0 auto 18px;
 }
 
 .section-text h2 {
   margin: 0 0 10px;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.25;
 }
 
 .section-text p {
-  margin: 0 0 22px;
-  max-width: 920px;
+  margin: 0;
   font-size: 15px;
   line-height: 1.55;
   color: #333;
@@ -71,18 +75,18 @@ h1 {
 
 .chart {
   width: 100%;
+  display: flex;
+  justify-content: center;
   overflow: visible;
 }
 
 .vega-embed {
   display: block;
-  margin: 0 auto;
 }
 
-/* Make the page still readable on smaller screens */
 @media (max-width: 900px) {
   .page {
-    padding: 24px 18px 48px;
+    padding: 24px 16px 48px;
   }
 
   h1 {
@@ -90,10 +94,15 @@ h1 {
   }
 
   .chart-section {
-    padding: 22px 20px 26px;
+    padding: 22px 18px 28px;
   }
 
   .section-text h2 {
     font-size: 21px;
+  }
+
+  .chart {
+    overflow-x: auto;
+    justify-content: flex-start;
   }
 }
