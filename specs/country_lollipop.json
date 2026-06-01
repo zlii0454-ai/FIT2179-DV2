@@ -1,0 +1,147 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 850,
+  "height": 500,
+
+  "title": {
+    "text": "Top Source Countries of International Students",
+    "subtitle": "Total students are calculated as continuing students plus new students",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "fontWeight": "bold",
+    "subtitleColor": "#555"
+  },
+
+  "data": {
+    "url": "Data/dv2_cleaned_data/students_by_country.csv"
+  },
+
+  "transform": [
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Students",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.Rank <= 15"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2,
+        "color": "#b8c4d0"
+      },
+      "encoding": {
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "value": 0
+        },
+        "x2": {
+          "field": "Students"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 130,
+        "color": "#1f4e79"
+      },
+      "encoding": {
+        "x": {
+          "field": "Students",
+          "type": "quantitative",
+          "title": "Number of Students",
+          "axis": {
+            "format": ",.0f"
+          }
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Students",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Total Students"
+          },
+          {
+            "field": "Continuing",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Continuing Students"
+          },
+          {
+            "field": "New",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "New Students"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "Students",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "Students",
+          "type": "quantitative",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "grid": true,
+      "gridColor": "#eeeeee"
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
