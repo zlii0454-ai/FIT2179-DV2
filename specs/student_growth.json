@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 750,
-  "height": 380,
+  "width": 700,
+  "height": 330,
 
   "title": {
     "text": "International Student Growth in Australia (2002–2020)",
