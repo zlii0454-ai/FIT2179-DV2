@@ -3,18 +3,20 @@
   "width": 600,
   "height": 350,
   "data": {
-    "values": [
-      {"Year": 2020, "Students": 100},
-      {"Year": 2021, "Students": 150},
-      {"Year": 2022, "Students": 200}
-    ]
-  },
+    "url": "Data/student_trend.csv"
+  }
   "mark": {
     "type": "line",
     "point": true
   },
   "encoding": {
-    "x": {"field": "Year", "type": "ordinal"},
-    "y": {"field": "Students", "type": "quantitative"}
+    "x": {
+      "field": "Year",
+      "type": "ordinal"
+    },
+  
+    "y": {
+      "field": "Enrolments",
+      "type": "quantitative"
+    }
   }
-}
